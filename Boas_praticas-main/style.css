@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-color: darkred;
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu_list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu_item--active {
+    font-weight: bold;
+}
+
+.menu_link {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    text-align: center;
+    min-height: 100vh;
+    background: 
+        linear-gradient(217deg, rgba(230, 3, 3, 0.7), rgba(255, 0, 0, 0) 70%),
+        linear-gradient(127deg, rgba(12, 3, 141, 0.8), rgba(55, 200, 200, 0) 70%),
+        linear-gradient(336deg, rgba(67, 3, 139, 0.9), rgba(0, 0, 255, 0) 70%);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media (max-width: 768px) {
+    .menu_list {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: none; /* Esconde a imagem hover inicialmente */
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.image-container:hover .normal-image {
+    visibility: hidden; /* Muda de display para visibility para evitar problemas */
+}
+
+.image-container:hover .hover-image {
+    display: block; /* Exibe a imagem hover ao passar o mouse */
+    visibility: visible; /* Garante que a imagem hover esteja visível */
+}
